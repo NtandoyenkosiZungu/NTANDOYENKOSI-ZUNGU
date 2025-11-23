@@ -1,0 +1,6 @@
+
+
+.myButton:disabled {
+    background-color: green;
+    cursor: not-allowed;
+}
