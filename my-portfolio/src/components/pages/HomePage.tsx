@@ -30,7 +30,7 @@ const classes = {
     mediumTypography: { 
         color: "inherit", 
         lineHeight: 1.3,
-        fontWeight: 300
+        fontWeight: 500
     },
     image: {
         width: {xs: 250 , md: 350},
@@ -50,15 +50,19 @@ export default function HomePage () {
         <Box component={'section'} sx={classes.homePageBox}>
             <Box sx={{flexGrow: 1}}>
                 <Box>
-                    <Typography variant="h4" sx={classes.largeTypography} fontWeight={700}>
+                    {/* <Typography variant="h4" sx={classes.largeTypography} fontWeight={700}>
                         Hi,
                     </Typography>
                     <Typography variant="h4" sx={classes.largeTypography} fontWeight={700}>
                         I am Ntandoyenkosi Zungu
-                    </Typography>
+                    </Typography> */}
                     <Typography variant="h6" sx={classes.mediumTypography}>
-                        I am a second year student at the university of KwaZulu-Natal <br />
-                        majoring in Computer Science & I.T
+                        I am a third year student at the university of KwaZulu-Natal <br />
+                        currently majoring in Computer Science & I.T
+                    </Typography>
+                    <br />
+                    <Typography variant="h6" sx={classes.mediumTypography}>
+                        I am <strong>Proficient</strong> in the following programming languages and tools
                     </Typography>
                 </Box>
 

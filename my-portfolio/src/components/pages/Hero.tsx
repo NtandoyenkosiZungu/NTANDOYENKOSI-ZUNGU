@@ -14,16 +14,21 @@ const classes = {
         textAlign:"center"
     },
     typoOne:{
+        fontFamily:"Impact",
         fontSize:150,
-        fontWeight: 700,
-        lineHeight: 1.5
+        fontWeight: 300,
     },
     typoTwo: {
-        fontSize:125,
-        fontWeight: 900,
-        lineHeight:1.5,
+        fontFamily:"Impact",
+        fontSize:140,
+        fontWeight: 300,
         color: "transparent",
         WebkitTextStroke:"2px black"
+    },
+
+    typoThree:{
+        fontFamily: "Impact",
+        fontSize: 20,
     },
 
     imageBox: {
@@ -42,14 +47,17 @@ export default function HeroSection() {
     return (
         <Box sx={classes.HeroBox}>
             <Box>
-                <Typography variant="caption" color="initial" fontSize={20}>
-                    Hello👋, My Name Is Ntandoyenkosi Zungu
+                <Typography variant="caption" sx={classes.typoThree}>
+                    Hello👋, Welcome to My Portfolio. My Name Is 👇
                 </Typography>
 
                 <Typography variant="h1" color="initial" sx={classes.typoOne}>
-                    C.S & I.T Student
+                    Ntandoyenkosi Zungu
                 </Typography>
-                <Typography variant="h1" color="initial" sx={classes.typoTwo}>
+                <Typography variant="caption" sx={classes.typoThree}>
+                    I'm an Aspiring
+                </Typography>
+                <Typography variant="h2" color="initial" sx={classes.typoTwo}>
                     Software Developer
                 </Typography>
             </Box>
