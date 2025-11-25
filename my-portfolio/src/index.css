@@ -9,4 +9,5 @@
 
 body{
   background-color: #FAF8F6;
+  scroll-behavior: smooth;
 }

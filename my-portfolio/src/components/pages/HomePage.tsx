@@ -1,7 +1,11 @@
-import { Box, Typography, Button, IconButton } from "@mui/material";
+import { Box, Typography, Button, IconButton, Tooltip } from "@mui/material";
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 import image from "../../assets/image_six.png"
+
+import tsImage from '../../assets/programming-assests/typescript-icon.svg'
+import javaImage from '../../assets/programming-assests/java-icon.svg'
+import pyImage from '../../assets/programming-assests/python-icon.svg'
 
 
 const classes = {
@@ -33,11 +37,11 @@ const classes = {
         fontWeight: 500
     },
     image: {
-        width: {xs: 250 , md: 350},
-        height: {xs: 250, md: 350},
-        borderRadius: "50%",
-        border: "3px solid black",
-        backgroundColor: "white",
+        width: {xs: 250 , md: 800},
+        height: {xs: 250, md: 800},
+        borderRadius: {xs:"50%", md:0},
+        border: {xs:"3px solid black", md:"none"},
+        backgroundColor: {xs:"white", md:"inherit"},
         backgroundImage:`url(${image})`,
         backgroundSize: "contain",
         backgroundPosition: "center",
@@ -47,7 +51,7 @@ const classes = {
 
 export default function HomePage () {
     return (
-        <Box component={'section'} sx={classes.homePageBox}>
+        <Box component={'section'} id="About Me" sx={classes.homePageBox}>
             <Box sx={{flexGrow: 1}}>
                 <Box>
                     {/* <Typography variant="h4" sx={classes.largeTypography} fontWeight={700}>
@@ -64,6 +68,17 @@ export default function HomePage () {
                     <Typography variant="h6" sx={classes.mediumTypography}>
                         I am <strong>Proficient</strong> in the following programming languages and tools
                     </Typography>
+                    <Box pt={2} pb={0} display={"flex"} gap={2}>
+                        <Tooltip title="Typescript">
+                            <img className="size-15 hover:cursor-pointer xs:size-5" src={tsImage}/>
+                        </Tooltip>
+                        <Tooltip title="Java">
+                            <img className="size-15 hover:cursor-pointer xs:size-5" src={javaImage}/>
+                        </Tooltip>
+                        <Tooltip title="Python">
+                            <img className="size-15 hover:cursor-pointer xs:size-5" src={pyImage}/>
+                        </Tooltip>
+                    </Box>
                 </Box>
 
                 {/* Contact Details and resume */}
@@ -87,9 +102,9 @@ export default function HomePage () {
                     </IconButton>
                 </Box>
             </Box>
-            <Box sx={classes.image}>
 
-            </Box>
+            {/* My Image on the About Me Page */}    
+            <Box sx={classes.image}/>
         </Box>
     )
 }

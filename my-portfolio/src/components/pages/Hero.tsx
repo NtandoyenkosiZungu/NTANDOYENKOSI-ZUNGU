@@ -15,12 +15,18 @@ const classes = {
     },
     typoOne:{
         fontFamily:"Impact",
-        fontSize:150,
+        fontSize:{
+            xs:70,
+            md:150
+        },
         fontWeight: 300,
     },
     typoTwo: {
         fontFamily:"Impact",
-        fontSize:140,
+        fontSize: {
+            xs: 70,
+            md: 150
+        },
         fontWeight: 300,
         color: "transparent",
         WebkitTextStroke:"2px black"
@@ -28,7 +34,10 @@ const classes = {
 
     typoThree:{
         fontFamily: "Impact",
-        fontSize: 20,
+        fontSize: {
+            xs:15,
+            md:20
+        },
     },
 
     imageBox: {
@@ -45,7 +54,7 @@ const classes = {
 
 export default function HeroSection() {
     return (
-        <Box sx={classes.HeroBox}>
+        <Box id={"Home"} sx={classes.HeroBox}>
             <Box>
                 <Typography variant="caption" sx={classes.typoThree}>
                     Hello👋, Welcome to My Portfolio. My Name Is 👇

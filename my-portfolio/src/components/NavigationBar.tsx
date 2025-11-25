@@ -12,6 +12,19 @@ const NavigationBar = () => {
 
     const handleCloseMenu = () => (setAnchor(null))     //Close the Menu
 
+    const scrollToSection = (id: string) => {
+        if (id === "Home"){
+            handleCloseMenu()
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            
+            return;
+        }
+        handleCloseMenu()
+        document.getElementById(id)?.scrollIntoView({
+            behavior:"smooth"
+        })
+    }
+
     return (
         <Container maxWidth="md">
         <AppBar
@@ -52,7 +65,7 @@ const NavigationBar = () => {
                 <Menu anchorEl={anchor} open={anchor != null} onClose={handleCloseMenu} keepMounted>
                     {
                         pages.map(page => (
-                                <MenuItem key={page} onClick={handleCloseMenu}>
+                                <MenuItem key={page} onClick={()=> scrollToSection(page)}>
                                     {page}
                                 </MenuItem>
                             )
@@ -68,6 +81,7 @@ const NavigationBar = () => {
                             <Button 
                                 key={page} 
                                 variant="contained"
+                                onClick={() => scrollToSection(page)}
                                 sx={
                                     {
                                         backgroundColor: "inherit", 

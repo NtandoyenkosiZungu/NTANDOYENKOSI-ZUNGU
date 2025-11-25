@@ -34,7 +34,7 @@ const classes = {
 const theme = createTheme ({
   palette: {
     primary: {
-      main: '#0D0D0D'
+      main: '#FAF8F6'
     }, 
     secondary: {
       main: "#121212"
