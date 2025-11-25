@@ -3,15 +3,32 @@ import './App.css'
 import {Box, Container} from '@mui/material'
 import NavigationBar from './components/NavigationBar'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
-import HomePage from './components/pages/HomePage'
 
+
+import HomePage from './components/pages/HomePage'
+import HeroSection from './components/pages/Hero'
+
+
+import image from "./assets/image_six.png"
 
 const classes = {
   background: {
     backgroundColor: '#FAF8F6',
     color: 'black',
     p: 10,
-    height: '100vh'
+    height: '100vh',
+  },
+
+  imageBox: {
+    height: "100vh",
+    width: "100%",
+    marginRight:20,
+    p:10,
+    zIndex:100,
+    backgroundImage: `url(${image})`,
+    backgroundSize: "contain",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat"
   }
 }
 const theme = createTheme ({
@@ -30,10 +47,13 @@ const theme = createTheme ({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-        <Box  sx={classes.background}>
-          <Container maxWidth="lg">
+        <Box component="section" sx={classes.background}>
+          <Container maxWidth="xl">
             <NavigationBar/>
-            <HomePage/>
+            <Box sx={{paddingTop:"120px", paddingBottom:0}}>
+              <HeroSection/>
+              <HomePage/>
+            </Box>
           </Container>
         </Box>
     </ThemeProvider>
